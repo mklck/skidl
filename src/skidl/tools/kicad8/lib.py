@@ -113,11 +113,6 @@ def load_sch_lib(lib, filename=None, lib_search_paths_=None, lib_section=None):
 
     # Parse the library and return a nested list of library parts.
     lib_txt = f.read()
-    try:
-        lib_txt = lib_txt.decode("latin_1")
-    except AttributeError:
-        # File contents were already decoded.
-        pass
 
     # Convert S-expression library into a list of symbols.
     try:
